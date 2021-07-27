@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+$background-color: #f8f8f8;
+$primary-color: #78CBD6;
+$secondary-color:#ff9f40;
+$font: 'Roboto', sans-serif;
+
+.post {
+  position: relative;
+  background-color: #fff;
+  max-width: 80em;
+  margin: 0 auto;
+
+  &__back {
+    display: block;
+    width: 100%;
+    background-color: #9fd4db;
+    color: #fff;
+    padding: 1rem;
+    text-decoration: none;
+    transition: background-color ease 200ms;
+    position: sticky;
+    top: 0;
+
+    &:hover {
+      background-color: $primary-color;
+      color: #f4f4f4;
+    }
+  }
+
+  &__intro,
+  &__body {
+    padding: 1rem 0;
+  }
+
+  &__intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+      font-size: 2.5rem;
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    &__info {
+      display: flex;
+      font-size: .9rem;
+      margin-bottom: 2rem;
+      color: #999999;
+
+      &__date::after {
+        content: '|';
+        margin: 0 10px;
+      }
+    }
+
+    &__desc {
+      max-width: 80%;
+      margin-bottom: 2rem;
+      color: #414141;
+      line-height: 1.5rem;
+    }
+
+    &__img {
+      width: 80%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  &__body {
+    max-width: 80%;
+    margin: auto;
+    padding: 1em 0 2em;
+    color: #414141;
+
+    p {
+      font-size: 1rem;
+      line-height: 1.9rem;
+    }
+  }
+}
