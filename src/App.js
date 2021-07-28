@@ -10,4 +10,4 @@ export default function App() {
         <Route path='/:id' component={SinglePost} />
     </BrowserRouter>
   )
-}
+};

@@ -7,11 +7,11 @@ const client = contentful.createClient({
   space: REACT_APP_SPACE_ID 
 })
 
-const getBlogPosts = () => client.getEntries().then(response => response.items)
+const getBlogPosts = () => client.getEntries().then(response => response.items);
 
 const getSinglePost = (slug) => client.getEntries({
   'fields.slug': slug,
   content_type: 'post'
-}).then(response => response.items)
+}).then(response => response.items);
 
-export { getBlogPosts, getSinglePost }
+export { getBlogPosts, getSinglePost };
