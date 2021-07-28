@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { usePosts } from '../custom-hooks'
+import usePosts from '../custom-hooks/usePosts'
 import dateFormat from 'dateformat'
 import './Posts.scss'
 import logo from '../img/c.png'

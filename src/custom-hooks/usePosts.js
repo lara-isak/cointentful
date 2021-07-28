@@ -18,4 +18,5 @@ export default function usePosts() {
 }, []);
 
   return [posts, isLoading];
-}
+};
+

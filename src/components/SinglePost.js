@@ -4,7 +4,7 @@ import { Link, useParams } from 'react-router-dom';
 // MD helps convert Markdown content to HTML and renders it
 import MD from 'react-markdown';
 import dateFormat from 'dateformat';
-import { useSinglePost } from '../custom-hooks';
+import useSinglePost from '../custom-hooks/useSinglePost';
 import './SinglePost.scss';
 
 export default function SinglePost() {
