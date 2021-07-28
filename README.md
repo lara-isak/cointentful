@@ -8,23 +8,13 @@ The project has been **deployed to Netlify** and you can check it out [here](htt
 
 ## 🏗️ How to run project locally
 
-### Prerequisites
+1. Run `git clone git@github.com:lara-isak/cointentful.git && cd cointentful/` in your terminal to clone the repo from Github and change from the current to the newly cloned directory
 
-In order to be able to fetch the data from Contentful and run the project locally, please follow the simple instructions in the **.env_sample file**. 
+2. Run `npm install` command to install all the necessary modules
 
-### Available Scripts
+3. Modify the **.env_sample file** following the simple instructions provided in the file itself
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-Your app is ready to be deployed!
+4. Finally run `npm start` and open [http://localhost:3000](http://localhost:3000) to view the app in the browser
 
 ## 🌱 What I learned
 
