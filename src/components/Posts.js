@@ -15,25 +15,27 @@ export default function Posts() {
 
     return posts.slice(0,8).map(post => (
 
-      <Link className='posts__post' key={post.fields.slug} to={post.fields.slug}>      
+      <Link className='posts__post' key={post.fields.slug} to={post.fields.slug}> 
 
-        <div className='posts__post__img__container'>
-          <img 
-            className='posts__post__img__container__img'
-            src={post.fields.featuredImage.fields.file.url}
-            alt={post.fields.postName}
-          />
-        </div>
-
-        <div className='posts__post__text__container'>
-          <p className='posts__post__text__container__category'>{post.fields.category.fields.categoryName}</p>
-          <h3 className='posts__post__text__container__name'>{post.fields.postName}</h3> 
-
-          <div className='posts__post__text__container__details'>
-            <p className='posts__post__text__container__details__date'>{dateFormat(post.fields.publishedDate, 'mmmm dS , yyyy')}</p>
-            <p>{post.fields.author.fields.name}</p>
+        <article>
+          <div className='posts__post__img__container'>
+            <img 
+              className='posts__post__img__container__img'
+              src={post.fields.featuredImage.fields.file.url}
+              alt={post.fields.postName}
+            />
           </div>
-        </div>
+
+          <div className='posts__post__text__container'>
+            <header className='posts__post__text__container__category'>{post.fields.category.fields.categoryName}</header>
+            <h3 className='posts__post__text__container__name'>{post.fields.postName}</h3> 
+
+            <footer className='posts__post__text__container__details'>
+              <p className='posts__post__text__container__details__date'>{dateFormat(post.fields.publishedDate, 'mmmm dS , yyyy')}</p>
+              <p>{post.fields.author.fields.name}</p>
+            </footer>
+          </div>
+        </article>       
 
       </Link>
     ))
@@ -41,7 +43,7 @@ export default function Posts() {
 
   return (
     <>
-    <header>
+    <header className='posts__header'>
       <img src={logo} alt="" />
       <h1>cointentful</h1>
     </header>

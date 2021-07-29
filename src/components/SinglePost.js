@@ -18,24 +18,26 @@ export default function SinglePost() {
 
     return(
       <>
-        <div className='post__intro'>
-          <h2 className='post__intro__title'>{post.postName}</h2>
-          <div className='post__intro__info'>
-            <p className='post__intro__info__date'>{dateFormat(post.publishedDate, 'mmmm dS , yyyy')}</p>
-            <p>{post.author.fields.name}</p>
+        <main>
+          <div className='post__intro'>
+            <h2 className='post__intro__title'>{post.postName}</h2>
+            <div className='post__intro__info'>
+              <p className='post__intro__info__date'>{dateFormat(post.publishedDate, 'mmmm dS , yyyy')}</p>
+              <p>{post.author.fields.name}</p>
+            </div>
+            <MD className='post__intro__desc' children={post.intro} />
+
+            <img 
+              className='post__intro__img'
+              src={post.featuredImage.fields.file.url}
+              alt={post.postName}
+            />
           </div>
-          <MD className='post__intro__desc' children={post.intro} />
 
-          <img 
-            className='post__intro__img'
-            src={post.featuredImage.fields.file.url}
-            alt={post.postName}
-          />
-        </div>
-
-        <div className='post__body'>
-          <MD children={post.content} />
-        </div>
+          <div className='post__body'>
+            <MD children={post.content} />
+          </div>
+        </main>        
       </>
     )
   }
