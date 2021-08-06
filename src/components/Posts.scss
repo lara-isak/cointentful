@@ -47,7 +47,7 @@ body {
 
 .posts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: minmax(400px, auto);
   gap: 3em 2em;
   align-items: center;
@@ -133,4 +133,10 @@ footer {
 
 svg {
   margin: -1em 0 -4px;
+}
+
+@media screen and (max-width: 480px) {
+  .footer__note {
+    font-size: .7em;
+  }
 }
