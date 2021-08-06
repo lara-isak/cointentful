@@ -13,7 +13,7 @@ export default function Posts() {
 
     console.log(posts)
 
-    return posts.slice(0,8).map(post => (
+    return posts.map(post => (
 
       <Link className='posts__post' key={post.fields.slug} to={post.fields.slug}> 
 
